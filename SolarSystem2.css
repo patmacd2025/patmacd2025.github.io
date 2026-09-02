@@ -1,0 +1,227 @@
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.anta-regular {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.background {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: url(Images/Stars.avif);
+}
+
+.planetbody {
+    background-image: url(images/Stars.avif);
+}
+
+.planetbackground {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    gap: 15px;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    outline: 1px solid black;
+    justify-content: start;
+    align-items: center;
+    gap: 25px;
+}
+
+.title {
+    position: absolute;
+    color: white;
+    bottom: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.indexnote {
+    position: absolute;
+    color: white;
+    top: calc(100% + 60px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.planet {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: 100px;
+    aspect-ratio: 1 / 1;
+    transition: transform 0.25s ease-out, filter 0.5s ease;
+}
+
+.planet:hover {
+    transform: scale(1.3);
+}
+
+.planet:hover .info {
+    opacity: 1;
+}
+
+.planet:hover .text {
+    opacity: 1;
+}
+
+.wrapper:has(.planet:hover) .planet:not(:hover):not(.sun){
+    transform: scale(0.75)
+}
+
+.wrapper:has(.planet:hover) .planet:not(:hover){
+    filter: grayscale(0.75);
+}
+
+.planet.sun {
+    aspect-ratio: 146 / 559;
+}
+
+.planet.saturn {
+    aspect-ratio: 565 / 316;
+}
+
+.planet img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.planet.mercury {
+    width: 15px;
+}
+
+.planet.venus {
+    width: 40px;
+}
+
+.planet.earth {
+    width: 45px;
+}
+
+.planet.mars {
+    width: 25px;
+}
+
+.planet.jupiter {
+    width: 150px;
+}
+
+.planet.saturn {
+    width: 250px;
+}
+
+.planet.uranus {
+    width: 70px;
+}
+
+.planet.neptune {
+    width: 70px;
+}
+
+.planet .info {
+    opacity: 0;
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 16px;
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    transition: opacity 0.25s ease-in;
+}
+
+.planet .text {
+    opacity: 0;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    width: 300px;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 16px;
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    transition: opacity 0.25s ease-in;
+}
+
+.planet.sun .info {
+    bottom: 76%;
+    left: 70%;
+    width: 70px
+}
+
+.planet.sun .text {
+    top: 76%;
+    left: 40%;
+    transform: none;
+}
+
+.planet.neptune .text {
+    right: 25px;
+    left: unset;
+    transform: none;
+}
+
+img.Planets {
+    height: 400px;
+    position: absolute;
+    top:270px;
+    right:100px;
+}
+p.Planets {
+    color: #ffffff;
+    text-align: left;
+    position: relative;
+    left: 65px;
+    bottom: 20px;
+    font-size: 20px;
+}
+
+.planettitle {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;  
+    font-size: 60px;
+}
